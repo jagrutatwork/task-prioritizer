@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 import com.tasks.model.Task;
 
 @Repository
-public interface ITaskRepo extends JpaRepository<Task, Integer>{
+public interface ITaskRepo extends JpaRepository<Task, Integer> {
 
-	 List<Task> findByUserId(Integer userId);
-	 
-	/*
+    List<Task> findByUserId(Integer userId);
+
+    /*
      * The following methods are inherited from JpaRepository:
      *
      * List<Task> findAll();
@@ -36,6 +36,6 @@ public interface ITaskRepo extends JpaRepository<Task, Integer>{
      * boolean existsById(Integer id);
      *     - Checks if a Task exists for the given ID.
      */
-	
+
 
 }

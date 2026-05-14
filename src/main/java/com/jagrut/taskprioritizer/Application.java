@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.jagrut.taskprioritizer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskPrioritizerApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(TaskPrioritizerApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }

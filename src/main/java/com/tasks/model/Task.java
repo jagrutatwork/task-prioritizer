@@ -2,6 +2,7 @@ package com.tasks.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
+
 import jakarta.persistence.*;
 
 
@@ -14,16 +15,16 @@ public class Task implements Comparable<Task> {
     private Integer id;
 
     private String description;
-    
+
     private LocalDateTime dueDate;
 
     @Enumerated(EnumType.STRING)
     private PriorityLevel priority;
 
     private boolean completed;
-    
+
     private LocalDateTime createdDate;
-    
+
     private LocalDateTime lastUpdateDate;
 
     public enum PriorityLevel {
@@ -126,8 +127,8 @@ public class Task implements Comparable<Task> {
     @Override
     public String toString() {
         return String.format(
-            "Task[id=%d, description=%s, dueDate=%s, priority=%s, completed=%s, createdDate=%s, lastUpdateDate=%s]",
-            id, description, dueDate, priority, completed, createdDate, lastUpdateDate
+                "Task[id=%d, description=%s, dueDate=%s, priority=%s, completed=%s, createdDate=%s, lastUpdateDate=%s]",
+                id, description, dueDate, priority, completed, createdDate, lastUpdateDate
         );
     }
 }

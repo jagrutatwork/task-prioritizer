@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.jagrut.taskprioritizer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TaskPrioritizerApplicationTests {
+class ApplicationTests {
 
     @Test
     void contextLoads() {

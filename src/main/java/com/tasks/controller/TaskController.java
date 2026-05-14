@@ -19,39 +19,39 @@ import com.tasks.service.TaskService;
 
 @RestController
 @RequestMapping("/tasks")
-public class TaskController implements ITaskController{
-	
-	@Autowired
-	TaskService taskService;
-	
-	@Override
-	@GetMapping("/{taskId}")
-	public Optional<Task> getTask(@PathVariable("taskId") Integer taskId) {
-		return taskService.getTask(taskId);
-	}
+public class TaskController implements ITaskController {
 
-	@Override
-	@GetMapping
-	public List<Task> getTasks(@RequestParam("userId") Integer userId) {
-		return taskService.getTasks(userId);
-	}
+    @Autowired
+    TaskService taskService;
 
-	@Override
-	@PostMapping
-	public Task addTask(@RequestBody Task task) {
-		return taskService.addTask(task);
-	}
+    @Override
+    @GetMapping("/{taskId}")
+    public Optional<Task> getTask(@PathVariable("taskId") Integer taskId) {
+        return taskService.getTask(taskId);
+    }
 
-	@Override
-	@PostMapping("/{taskId}/priority")
-	public void changePriority(@PathVariable("taskId") Integer taskId, @RequestParam("priority") PriorityLevel priority) {
-	      taskService.changePriority(taskId, priority);
-	}
+    @Override
+    @GetMapping
+    public List<Task> getTasks(@RequestParam("userId") Integer userId) {
+        return taskService.getTasks(userId);
+    }
 
-	@Override
-	@PostMapping
-	public void editTask(@RequestBody Task task) {
-		  taskService.editTask(task);
-	}
+    @Override
+    @PostMapping
+    public Task addTask(@RequestBody Task task) {
+        return taskService.addTask(task);
+    }
+
+    @Override
+    @PostMapping("/{taskId}/priority")
+    public void changePriority(@PathVariable("taskId") Integer taskId, @RequestParam("priority") PriorityLevel priority) {
+        taskService.changePriority(taskId, priority);
+    }
+
+    @Override
+    @PostMapping
+    public void editTask(@RequestBody Task task) {
+        taskService.editTask(task);
+    }
 
 }

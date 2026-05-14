@@ -9,9 +9,9 @@ import com.tasks.model.Task;
 import com.tasks.model.User;
 
 @Repository
-public interface IUserRepo extends JpaRepository<Task, Integer>{
+public interface IUserRepo extends JpaRepository<Task, Integer> {
 
-	Optional<User> findByUsername(String username);
-	 
+    Optional<User> findByUsername(String username);
+
 
 }
