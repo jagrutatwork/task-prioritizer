@@ -10,7 +10,6 @@ public class TicketController {
 
     @PostMapping
     public ResponseEntity<String> addTicket(@RequestBody Ticket ticket) {
-
         return ResponseEntity.ok("Ticket added successfully");
     }
 
