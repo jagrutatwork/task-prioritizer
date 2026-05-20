@@ -13,6 +13,7 @@ public class TicketService {
     public boolean AddTicket(Ticket ticket)
     {
         tickets.add(ticket);
+        return true;
     }
 
     public List<Ticket> getAllTickets() {
