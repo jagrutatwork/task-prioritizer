@@ -10,7 +10,7 @@ public class TicketService {
 
     private final List<Ticket> tickets = new ArrayList<>();
 
-    public boolean AddTicket(Ticket ticket)
+    public boolean addTicket(Ticket ticket)
     {
         tickets.add(ticket);
         return true;
@@ -21,7 +21,8 @@ public class TicketService {
     }
 
     public boolean deleteTicket(Long id){
-        return ticket;
+        tickets.remove(id);
+        return true;
     }
 
     public boolean updateTicket(Long id, Ticket updatedTicket) {

@@ -28,7 +28,7 @@ public class TicketController {
             @PathVariable Long id,
             @RequestBody Ticket ticket) {
 
-        ticketService.addTicket(ticket);
+        ticketService.updateTicket(id,ticket);
         return ResponseEntity.ok("Ticket updated successfully");
     }
 
